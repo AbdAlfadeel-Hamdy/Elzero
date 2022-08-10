@@ -1,0 +1,28 @@
+.nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  &__item {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid transparent;
+    padding: 0 2rem;
+    transform-origin: left;
+
+    transition: 0.3s;
+    &:hover {
+      border-top: 3px solid $main-color;
+      color: $main-color;
+      background-color: $light-color-1;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
