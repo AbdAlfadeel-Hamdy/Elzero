@@ -1,0 +1,9 @@
+.down-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -10rem);
+  color: $main-color;
+  font-weight: 900;
+  font-size: 3.2rem;
+  animation: bounce 1.5s infinite ease-in-out;
+}

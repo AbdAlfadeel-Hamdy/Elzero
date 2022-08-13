@@ -1,0 +1,32 @@
+@keyframes upAndDown {
+  0% {
+    transform: translateY(-4rem);
+  }
+  50% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(-4rem);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10rem);
+  }
+  30% {
+    transform: translateY(-12rem);
+  }
+  60% {
+    transform: translateY(-10rem);
+  }
+  70% {
+    transform: translateY(-12rem);
+  }
+  80% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-10rem);
+  }
+}

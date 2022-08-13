@@ -1,6 +1,9 @@
 @import "abstract/variables";
-
+@import "base/typography";
 @import "layout/layout";
 @import "layout/header";
 @import "base/base";
 @import "components/nav";
+@import "pages/home";
+@import "base/animations";
+@import "components/downArrow";
