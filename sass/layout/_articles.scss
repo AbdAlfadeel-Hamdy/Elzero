@@ -1,6 +1,8 @@
+.articles__section {
+  padding: 10rem 0 8rem;
+}
 .articles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 4rem;
-  padding: 7rem 0;
 }

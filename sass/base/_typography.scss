@@ -9,4 +9,48 @@ body {
     text-transform: capitalize;
     letter-spacing: -2px;
   }
+  &__secondary {
+    width: fit-content;
+    margin: 0 auto 8rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 2px solid $black-color;
+    padding: 0 2rem;
+    position: relative;
+    transition: background-color 0.3s 0.2s ease-out, color 0.3s 0.4s ease-out,
+      border 0.3s 0.5s ease-out;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    &:hover::before,
+    &:hover::after {
+      transform: translate(0, -50%);
+    }
+    &::before {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      position: absolute;
+      background-color: $main-color;
+      top: 50%;
+      left: 0;
+      transform: translate(-3rem, -50%);
+      transition: 0.3s;
+    }
+    &::after {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      position: absolute;
+      background-color: $main-color;
+      top: 50%;
+      right: 0;
+      transform: translate(3rem, -50%);
+      transition: 0.3s;
+    }
+  }
 }
