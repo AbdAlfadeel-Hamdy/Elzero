@@ -1,0 +1,18 @@
+.gallery {
+  padding: $section-padding;
+  background-color: $light-color-3;
+  position: relative;
+  &__top {
+    width: 100%;
+    position: absolute;
+    top: -4rem;
+    z-index: 2;
+    overflow: hidden;
+    display: flex;
+    > div {
+      border-width: 2rem;
+      border-style: solid;
+      border-color: transparent transparent $light-color-3 transparent;
+    }
+  }
+}
