@@ -30,3 +30,21 @@ const stars = (person) => {
 };
 
 personsRating.forEach(stars);
+
+// Skills Observer
+const sectionSkills = document.querySelector(".skills");
+const move = (entries, observer) => {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    entry.target
+      .querySelectorAll(".skills__display")
+      .forEach((el) => el.classList.add("move"));
+    observer.unobserve(sectionSkills);
+  }
+};
+const observer = new IntersectionObserver(move, {
+  root: null,
+  rootMargin: "-350px",
+});
+
+observer.observe(sectionSkills);
