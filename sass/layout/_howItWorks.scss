@@ -1,0 +1,56 @@
+.how-it-works {
+  padding: $section-padding;
+  background-color: $light-color-3;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .heading__secondary {
+    grid-column: span 2;
+  }
+  &__img {
+    justify-self: flex-start;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__card {
+    border: 2px solid #fff;
+    background-color: $light-color-8;
+    border-radius: 5px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    column-gap: 3rem;
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      transition: 0.3s;
+      position: absolute;
+      background-color: $light-color-3;
+      z-index: -1;
+    }
+    &:hover::before {
+      transform: scale(1);
+    }
+    &__img {
+      width: 6rem;
+      height: 6rem;
+      grid-row: span 2;
+    }
+    &__content {
+      font-size: 1.8rem;
+      color: $grey-color-1;
+    }
+  }
+}
