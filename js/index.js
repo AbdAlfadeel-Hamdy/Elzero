@@ -48,3 +48,40 @@ const observer = new IntersectionObserver(move, {
 });
 
 observer.observe(sectionSkills);
+
+//  Timer
+
+const days = document.querySelector(".days");
+const hours = document.querySelector(".hours");
+const minutes = document.querySelector(".minutes");
+const seconds = document.querySelector(".seconds");
+
+const eventDate = new Date(2022, 8, 31);
+
+const timer = setInterval(() => {
+  const currentDate = new Date();
+  const timeGap = eventDate - currentDate;
+  days.textContent = String(Math.floor(timeGap / 1000 / 60 / 60 / 24)).padStart(
+    2,
+    "0"
+  );
+  hours.textContent = String(
+    Math.floor((timeGap % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60)
+  ).padStart(2, "0");
+  minutes.textContent = String(
+    Math.floor(
+      ((timeGap % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60 -
+        +hours.textContent) *
+        60
+    )
+  ).padStart(2, "0");
+  seconds.textContent = String(
+    Math.floor(
+      (((timeGap % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60 -
+        +hours.textContent) *
+        60 -
+        minutes.textContent) *
+        60
+    )
+  ).padStart(2, 0);
+}, 1000);
