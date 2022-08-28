@@ -1,0 +1,57 @@
+.videos {
+  padding: $section-padding;
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+  }
+  &__heading {
+    background-color: #f4f4f4;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: #333;
+  }
+  &__item {
+    padding: 1rem 2rem;
+    border: 1px solid $light-color-3;
+    transition: 0.3s;
+    &:hover {
+      background-color: #fafafa;
+      .videos__name {
+        color: $main-color;
+      }
+    }
+  }
+  &__name {
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+  &__time {
+    font-size: 1.5rem;
+    color: #777;
+  }
+  &__preview {
+    background-color: #e2e2e2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__img {
+    max-width: 100%;
+  }
+  &__text {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+}
