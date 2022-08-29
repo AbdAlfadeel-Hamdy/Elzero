@@ -70,7 +70,7 @@ body {
   box-sizing: border-box; }
 
 html {
-  box-sizing: border-box;
+  box-sizing: inherit;
   font-size: 62.5%; }
 
 body {
@@ -963,3 +963,59 @@ body {
     background-color: #fff;
     padding: 1rem 2rem;
     font-size: 1.8rem; }
+
+.stats {
+  padding: 12rem 0;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../../img/stats.jpg); }
+  .stats__heading {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 4rem; }
+  .stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    gap: 2rem; }
+  .stats__stat {
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    .stats__stat::before {
+      content: "";
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      background-color: #2196f3;
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transition: 0.5s ease-out;
+      transform-origin: bottom; }
+    .stats__stat:hover::before {
+      transform: scaleY(1); }
+    .stats__stat::after {
+      content: "";
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      background-color: #2196f3;
+      top: 0;
+      right: 0;
+      transform: scaleY(0);
+      transition: 0.7s ease-out;
+      transform-origin: top; }
+    .stats__stat:hover::after {
+      transform: scaleY(1); }
+  .stats__icon {
+    font-size: 3rem; }
+  .stats__number {
+    font-size: 5rem;
+    font-weight: 700; }
+  .stats__type {
+    font-size: 2rem;
+    color: #2196f3;
+    font-weight: 700;
+    font-style: italic; }

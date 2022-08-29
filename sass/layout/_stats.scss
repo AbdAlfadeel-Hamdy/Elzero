@@ -1,0 +1,71 @@
+.stats {
+  padding: $section-padding;
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(../../img/stats.jpg);
+  &__heading {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    gap: 2rem;
+  }
+  &__stat {
+    background-color: $white-color;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: "";
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      background-color: $main-color;
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transition: 0.5s ease-out;
+      transform-origin: bottom;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+    }
+    &::after {
+      content: "";
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      background-color: $main-color;
+      top: 0;
+      right: 0;
+      transform: scaleY(0);
+      transition: 0.7s ease-out;
+      transform-origin: top;
+    }
+    &:hover::after {
+      transform: scaleY(1);
+    }
+  }
+  &__icon {
+    font-size: 3rem;
+  }
+  &__number {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  &__type {
+    font-size: 2rem;
+    color: $main-color;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
