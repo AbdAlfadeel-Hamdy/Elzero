@@ -1,0 +1,92 @@
+.discount {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+  &__details {
+    height: 100vh;
+    background-image: linear-gradient(
+        to left,
+        rgba($main-color, 0.97),
+        rgba($main-color, 0.97)
+      ),
+      url("../../img/discount-background1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 8rem 12rem;
+    &__heading {
+      color: $white-color;
+      font-size: 4rem;
+      text-transform: capitalize;
+      letter-spacing: -2px;
+    }
+    &__text {
+      font-size: 1.8rem;
+      color: $white-color;
+      text-align: center;
+    }
+    &__img {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+  &__form {
+    height: 100vh;
+    padding: 8rem 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    &__heading {
+      font-size: 4rem;
+      text-transform: capitalize;
+      letter-spacing: -2px;
+    }
+    input {
+      width: 60%;
+      border: none;
+      outline: none;
+      padding: 1.5rem;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+      caret-color: $main-color;
+      &::placeholder {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+      }
+    }
+    textarea {
+      border: none;
+      background: none;
+      outline: none;
+      padding: 1.5rem;
+      width: 60%;
+      border-bottom: 1px solid #ccc;
+      background-color: #f9f9f9;
+      caret-color: $main-color;
+      &::placeholder {
+        font-family: cairo;
+        color: #777;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+    }
+    button {
+      background: none;
+      border: none;
+      background-color: $main-color;
+      color: #fff;
+      width: 60%;
+      padding: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: $main-color-alt;
+      }
+    }
+  }
+}

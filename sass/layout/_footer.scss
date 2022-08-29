@@ -1,0 +1,125 @@
+.footer {
+  background-color: #191919;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 6rem;
+    padding: 7rem 0;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    &__heading {
+      color: $white-color;
+      font-size: 5rem;
+      margin: 0;
+      padding: 0;
+    }
+    &__social {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      width: 80%;
+      margin-bottom: 2rem;
+    }
+    &__item {
+      background-color: #333;
+      flex: 1;
+    }
+    &__link:link,
+    &__link:visited {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      width: 100%;
+      height: 100%;
+      color: #b9b9b9;
+      font-size: 2rem;
+      transition: 0.3s;
+      &:hover.face {
+        background-color: #1877f2;
+      }
+      &:hover.twitter {
+        background-color: #1da1f2;
+      }
+      &:hover.youtube {
+        background-color: #cd201f;
+      }
+    }
+    &__text {
+      color: #b9b9b9;
+      font-size: 1.5rem;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    &__item {
+      padding: 1rem;
+      &:hover .footer__links__link {
+        transform: translateX(5px);
+        color: $white-color;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+    }
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: #b9b9b9;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: 0.3s;
+      svg {
+        color: $main-color;
+      }
+    }
+  }
+  &__address {
+    color: #b9b9b9;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    & > div {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    &__phone span {
+      display: flex;
+      flex-direction: column;
+    }
+    svg {
+      font-size: 2rem;
+      color: $main-color;
+    }
+  }
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 8rem);
+    gap: 6px;
+    &__img-box {
+      padding: 3px;
+      background-color: #fff;
+      height: calc(8rem -6px);
+    }
+    &__img {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+  &__foot {
+    border-top: 1px solid #444;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+  }
+}
