@@ -85,3 +85,21 @@ const timer = setInterval(() => {
     )
   ).padStart(2, 0);
 }, 1000);
+
+// Scroll Navigation
+
+const navLinks = document.querySelectorAll(".nav__link");
+const megaLinks = document.querySelectorAll(".mega__link");
+console.log(megaLinks);
+
+[...navLinks, ...megaLinks].forEach((link) => {
+  if (link.getAttribute("href") === "#") return;
+  const section = document.querySelector(`.${link.getAttribute("href")}`);
+  console.log(section);
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    section.scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});

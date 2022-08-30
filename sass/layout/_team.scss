@@ -10,6 +10,8 @@
     position: relative;
     height: 45rem;
     display: flex;
+    z-index: 0;
+    transition: 0.3s;
 
     &__blank {
       width: 10%;
@@ -19,6 +21,7 @@
       border-radius: 1rem;
       width: 90%;
       background-color: $light-color-3;
+      transition: 0.3s;
     }
     &__img {
       width: 30rem;
@@ -54,17 +57,12 @@
       z-index: 2;
     }
 
-    &:hover .member__img {
+    &:hover {
       filter: grayscale(1);
-    }
-    &:hover .member__name {
-      color: $grey-color;
-      transition: 0.3s;
-      filter: grayscale(1);
-    }
-    &:hover .member__description {
-      transition: 0.3s;
-      filter: grayscale(1);
+      background-color: transparent;
+      .member__content {
+        background-color: transparent;
+      }
     }
     &::before {
       content: "";
@@ -73,6 +71,7 @@
       transform: scaleX(0);
       transform-origin: right;
       left: 10%;
+      z-index: -1;
       position: absolute;
       background-color: $light-color-6;
       border-radius: 1rem;

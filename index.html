@@ -17,78 +17,88 @@
     <script defer src="js/index.js"></script>
   </head>
   <body>
+    <!-- Header -->
     <header class="header container">
       <div class="header__logo">
         <a class="header__logo__link" href="#">Elzero</a>
       </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Articles</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Gallery</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="articles">Articles</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="gallery">Gallery</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="features">Features</a>
+          </li>
           <li class="nav__item show__mega-menu">
             <a class="nav__link" href="#">Other links</a>
           </li>
         </ul>
       </nav>
-      <div class="mega__menu">
+      <!-- Mega Menu -->
+      <section class="mega__menu">
         <div class="img-box">
           <img src="img/megamenu.png" class="mega__img" alt="" />
         </div>
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="testimonials"
           ><i class="fa-regular fa-comments"></i>Testimonials</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="events"
           ><i class="fa-regular fa-calendar-days"></i>Events</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="team"
           ><i class="fa-regular fa-user"></i>Team Members</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="pricing"
           ><i class="fa-solid fa-list-ul"></i>Pricing Plans</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="services"
           ><i class="fa-regular fa-building"></i>Services</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="videos"
           ><i class="fa-regular fa-circle-play"></i>Top Videos</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="skills"
           ><i class="fa-regular fa-circle-check"></i>Our Skills</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="stats"
           ><i class="fa-regular fa-chart-bar"></i>Stats</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="how-it-works"
           ><i class="fa-regular fa-clipboard"></i>How It Works</a
         >
-        <a class="mega__link" href="#"
+        <a class="mega__link" href="discount"
           ><i class="fa-solid fa-percent"></i>Request A Discount</a
         >
-      </div>
+      </section>
     </header>
-    <div class="landing">
+    <!-- Landing Page -->
+    <section class="landing">
       <div class="container">
-        <div class="landing__content">
+        <main class="landing__content">
           <h1 class="heading__primary">Welcome to elzero world</h1>
           <p class="landing__text">
             Here I'm gonna share everything about my life. Books I'm reading,
             games I'm playing, stories and events
           </p>
-        </div>
+        </main>
         <div class="landing__img-box">
           <img class="landing__img" src="img/landing-image.png" alt="Photo" />
         </div>
       </div>
-    </div>
+    </section>
     <div style="position: relative">
       <a href="#" class="down-arrow">
         <i class="fas fa-angle-double-down"></i>
       </a>
     </div>
-    <div class="articles__section container">
+    <!-- Articles Section -->
+    <section class="articles container">
       <h2 class="heading__secondary">Articles</h2>
-      <div class="articles">
+      <div class="articles__content">
         <div class="article">
           <img src="img/cat-01.jpg" class="article__img" />
           <div class="article__details">
@@ -194,9 +204,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Gallery Section -->
-    <div class="gallery">
+    <section class="gallery">
       <div class="gallery__top">
         <div></div>
         <div></div>
@@ -267,9 +277,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Features Section -->
-    <div class="features container">
+    <section class="features container">
       <h2 class="heading__secondary">Features</h2>
       <div class="features__box">
         <div class="feature feature--red">
@@ -313,9 +323,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Testimonials Section -->
-    <div class="testimonials">
+    <section class="testimonials">
       <div class="container">
         <h2 class="heading__secondary">Testimonials</h2>
         <div class="persons">
@@ -406,9 +416,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Team Members Section -->
-    <div class="team container">
+    <section class="team container">
       <h2 class="heading__secondary">Team Members</h2>
       <div class="members">
         <div class="member">
@@ -531,10 +541,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Services Section -->
-    <div class="services__section">
-      <div class="services__section__top">
+    <section class="services">
+      <div class="services__top">
         <div></div>
         <div></div>
         <div></div>
@@ -582,7 +592,7 @@
       </div>
       <div class="container">
         <h2 class="heading__secondary">Services</h2>
-        <div class="services">
+        <div class="services__content">
           <div class="service">
             <div class="service__head">
               <i class="fa-solid fa-user-shield"></i>
@@ -651,9 +661,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Skills Section -->
-    <div class="skills container">
+    <section class="skills container">
       <h2 class="heading__secondary">Our Skills</h2>
       <img src="img/skills.png" class="skills__img" alt="laptop" />
       <ul class="skills__list">
@@ -678,7 +688,7 @@
           <div class="skills__display skills__display--4"></div>
         </li>
       </ul>
-    </div>
+    </section>
     <!-- How It Works -->
     <section class="how-it-works">
       <div class="container">
@@ -761,6 +771,7 @@
       <img src="img/dots.png" alt="dots" class="events__dots--1" />
       <img src="img/dots.png" alt="dots" class="events__dots--2" />
     </section>
+    <!-- Pricing Section -->
     <section class="pricing">
       <h2 class="heading__secondary">Pricing plans</h2>
       <div class="container">

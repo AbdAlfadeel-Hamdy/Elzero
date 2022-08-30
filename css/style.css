@@ -225,13 +225,12 @@ body {
   visibility: visible;
   transform: translateY(0); }
 
-.articles__section {
-  padding: 10rem 0 14rem; }
-
 .articles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 4rem; }
+  padding: 10rem 0 14rem; }
+  .articles__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem; }
 
 .article {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
@@ -464,14 +463,17 @@ body {
   .members .member {
     position: relative;
     height: 45rem;
-    display: flex; }
+    display: flex;
+    z-index: 0;
+    transition: 0.3s; }
     .members .member__blank {
       width: 10%; }
     .members .member__content {
       padding: 20rem 2rem 0;
       border-radius: 1rem;
       width: 90%;
-      background-color: #ececec; }
+      background-color: #ececec;
+      transition: 0.3s; }
     .members .member__img {
       width: 30rem;
       border-radius: 1rem;
@@ -498,15 +500,11 @@ body {
     .members .member__description {
       font-size: 1.6rem;
       z-index: 2; }
-    .members .member:hover .member__img {
-      filter: grayscale(1); }
-    .members .member:hover .member__name {
-      color: #666;
-      transition: 0.3s;
-      filter: grayscale(1); }
-    .members .member:hover .member__description {
-      transition: 0.3s;
-      filter: grayscale(1); }
+    .members .member:hover {
+      filter: grayscale(1);
+      background-color: transparent; }
+      .members .member:hover .member__content {
+        background-color: transparent; }
     .members .member::before {
       content: "";
       height: 100%;
@@ -514,6 +512,7 @@ body {
       transform: scaleX(0);
       transform-origin: right;
       left: 10%;
+      z-index: -1;
       position: absolute;
       background-color: #e4e4e4;
       border-radius: 1rem;
@@ -521,32 +520,32 @@ body {
     .members .member:hover.member::before {
       transform: scaleX(1); }
 
-.services__section {
+.services {
   background-color: #ececec;
   padding: 12rem 0;
   position: relative; }
-  .services__section__top {
+  .services__top {
     width: 100%;
     position: absolute;
     top: -4rem;
     z-index: 2;
     overflow: hidden;
     display: flex; }
-    .services__section__top > div {
+    .services__top > div {
       border-width: 2rem;
       border-style: solid;
       border-color: transparent transparent #ececec transparent; }
 
-.services {
+.services__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 4rem; }
-  .services .service {
+  .services__content .service {
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
     transition: 0.3s;
     position: relative; }
-    .services .service::before {
+    .services__content .service::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -555,28 +554,28 @@ body {
       transform: scaleX(0);
       transition: 0.3s;
       top: -2px; }
-    .services .service:hover {
+    .services__content .service:hover {
       transform: translateY(-1rem); }
-      .services .service:hover::before {
+      .services__content .service:hover::before {
         transform: scaleX(1); }
-    .services .service__head {
+    .services__content .service__head {
       padding: 3rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 2rem; }
-      .services .service__head svg {
+      .services__content .service__head svg {
         font-size: 6rem;
         color: #d5d5d5; }
-    .services .service__title {
+    .services__content .service__title {
       color: #2196f3;
       font-size: 2.5rem; }
-    .services .service__footer {
+    .services__content .service__footer {
       display: flex;
       height: 5rem;
       background-color: #f9f9f9; }
-    .services .service__number {
+    .services__content .service__number {
       background-color: #2196f3;
       width: 25%;
       color: #fff;
@@ -587,11 +586,11 @@ body {
       font-weight: 700;
       clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
       padding-right: 1rem; }
-    .services .service__blank {
+    .services__content .service__blank {
       width: 15%;
       background-color: #d5d5d5;
       transform: skew(-20deg) translateX(-1rem); }
-    .services .service__details {
+    .services__content .service__details {
       flex: 1;
       background-color: #f9f9f9;
       text-align: right;

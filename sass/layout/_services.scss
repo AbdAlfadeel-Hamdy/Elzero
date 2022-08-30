@@ -1,4 +1,4 @@
-.services__section {
+.services {
   background-color: $light-color-3;
   padding: $section-padding;
   position: relative;
@@ -17,7 +17,7 @@
   }
 }
 
-.services {
+.services__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 4rem;
