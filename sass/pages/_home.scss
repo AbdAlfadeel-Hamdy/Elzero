@@ -6,6 +6,11 @@
     align-items: center;
     height: calc(100vh - 7rem);
     padding-bottom: 15rem;
+    @include respond(tab) {
+      grid-template-columns: auto;
+      text-align: center;
+      grid-template-rows: 1fr;
+    }
   }
   background-color: $light-color-2;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
@@ -15,10 +20,20 @@
     max-height: 100%;
     z-index: 100;
     animation: upAndDown 5s infinite ease-in-out;
+    & {
+      @include respond(tab) {
+        display: none;
+      }
+    }
   }
   &__text {
     color: $grey-color;
     font-size: 2.5rem;
     line-height: $line-height;
+    & {
+      @include respond(tab) {
+        padding: 0 6rem;
+      }
+    }
   }
 }
