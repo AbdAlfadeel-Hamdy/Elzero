@@ -3,6 +3,11 @@
     list-style: none;
     display: flex;
     gap: 2rem;
+    & {
+      @include respond(lab) {
+        gap: 1rem;
+      }
+    }
   }
   &__item {
     height: 7rem;
@@ -12,6 +17,10 @@
     padding: 0 2rem;
     transform-origin: left;
     position: relative;
+    @include respond(phone) {
+      height: 4rem;
+      padding: 0 1.5rem;
+    }
     &::before {
       content: "";
       position: absolute;

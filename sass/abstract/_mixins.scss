@@ -12,4 +12,9 @@
       @content;
     }
   }
+  @if $breakpoint == lab {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
 }

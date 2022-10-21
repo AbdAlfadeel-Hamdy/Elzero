@@ -1,12 +1,14 @@
 .container {
   max-width: 114rem;
   margin: 0 auto;
+  padding: 0 3rem;
   & {
+    @include respond(lab) {
+      max-width: 90rem;
+      padding: 0 6rem;
+    }
     @include respond(tab) {
       max-width: 70rem;
-    }
-    @include respond(phone) {
-      max-width: 50rem;
     }
   }
 }

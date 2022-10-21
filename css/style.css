@@ -56,12 +56,16 @@ body {
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media (max-width: 62em) {
+    html {
+      font-size: 56.25%; } }
   @media (max-width: 48em) {
     html {
       font-size: 50%; } }
 
 body {
-  position: relative; }
+  position: relative;
+  background-color: black; }
 
 @keyframes upAndDown {
   0% {
@@ -97,6 +101,9 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem; }
+  @media (max-width: 75em) {
+    .nav__list {
+      gap: 1rem; } }
 
 .nav__item {
   height: 7rem;
@@ -106,6 +113,10 @@ body {
   padding: 0 2rem;
   transform-origin: left;
   position: relative; }
+  @media (max-width: 48em) {
+    .nav__item {
+      height: 4rem;
+      padding: 0 1.5rem; } }
   .nav__item::before {
     content: "";
     position: absolute;
@@ -265,6 +276,12 @@ body {
   visibility: hidden;
   transform: translateY(2rem);
   transition: all 0.3s; }
+  @media (max-width: 62em) {
+    .megamenu {
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); } }
+  @media (max-width: 48em) {
+    .megamenu {
+      width: 100%; } }
   .megamenu.show__mega-menu {
     opacity: 1;
     visibility: visible;
@@ -296,8 +313,14 @@ body {
   .megamenu__img-box {
     grid-column: 1 / span 2;
     grid-row: 1 / -1; }
+    @media (max-width: 62em) {
+      .megamenu__img-box {
+        display: none; } }
   .megamenu__img {
     max-width: 100%; }
+    @media (max-width: 62em) {
+      .megamenu__img {
+        display: none; } }
 
 .articles {
   padding: 10rem 0 14rem; }
@@ -616,8 +639,19 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 6rem; }
+  @media (max-width: 75em) {
+    .skills {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 0; } }
+  @media (max-width: 48em) {
+    .skills {
+      grid-template-columns: 1fr; } }
   .skills h2 {
     grid-column: 1 / -1; }
+  @media (max-width: 75em) {
+    .skills__img {
+      width: 40rem; } }
   @media (max-width: 48em) {
     .skills__img {
       display: none; } }
@@ -628,9 +662,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem; }
+    @media (max-width: 75em) {
+      .skills__list {
+        grid-column: 2/3;
+        padding-left: 0; } }
     @media (max-width: 48em) {
       .skills__list {
-        padding-left: 0; } }
+        grid-column: 1/-1; } }
   .skills__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -672,13 +710,15 @@ body {
 
 .container {
   max-width: 114rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 3rem; }
+  @media (max-width: 75em) {
+    .container {
+      max-width: 90rem;
+      padding: 0 6rem; } }
   @media (max-width: 62em) {
     .container {
       max-width: 70rem; } }
-  @media (max-width: 48em) {
-    .container {
-      max-width: 50rem; } }
 
 .how-it-works {
   padding: 12rem 0;
