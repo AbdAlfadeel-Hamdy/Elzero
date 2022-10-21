@@ -3,10 +3,12 @@
     list-style: none;
     display: flex;
     gap: 2rem;
-    & {
-      @include respond(lab) {
-        gap: 1rem;
-      }
+
+    @include respond(lap) {
+      gap: 1rem;
+    }
+    @include respond(phone) {
+      gap: 0;
     }
   }
   &__item {
@@ -20,6 +22,7 @@
     @include respond(phone) {
       height: 4rem;
       padding: 0 1.5rem;
+      font-size: 1.8rem;
     }
     &::before {
       content: "";

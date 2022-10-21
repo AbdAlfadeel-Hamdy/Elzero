@@ -12,7 +12,7 @@
       @content;
     }
   }
-  @if $breakpoint == lab {
+  @if $breakpoint == lap {
     @media (max-width: 75em) {
       @content;
     }

@@ -1,14 +1,12 @@
 .container {
-  max-width: 114rem;
+  max-width: 110rem;
   margin: 0 auto;
-  padding: 0 3rem;
   & {
-    @include respond(lab) {
+    @include respond(lap) {
       max-width: 90rem;
-      padding: 0 6rem;
     }
     @include respond(tab) {
-      max-width: 70rem;
+      max-width: 75rem;
     }
   }
 }
