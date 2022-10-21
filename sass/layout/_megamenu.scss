@@ -5,7 +5,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
-  width: 80%;
+  width: 110rem;
   top: calc(7rem + 1px);
   margin: auto;
   background-color: $white-color;
@@ -17,15 +17,24 @@
   visibility: hidden;
   transform: translateY(2rem);
   transition: all 0.3s;
-
-  & {
-    @include respond(tab) {
-      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-    }
-    @include respond(phone) {
-      width: 100%;
-    }
+  @include respond(lap) {
+    width: 90rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 1rem 2rem;
   }
+  @include respond(tab) {
+    width: 75rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    top: calc(12.1rem);
+  }
+
   &.show__mega-menu {
     opacity: 1;
     visibility: visible;
@@ -38,12 +47,13 @@
     display: flex;
     align-items: center;
     height: 100%;
-
     gap: 2rem;
-    padding: 1rem 3rem;
     border-bottom: 1px solid $light-color-2;
     font-weight: 700;
     position: relative;
+    @include respond(lap) {
+      padding: 1rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -60,22 +70,28 @@
     &:hover::before {
       transform: scaleX(100%);
     }
+    &:last-child {
+      border-bottom: none;
+    }
+    &:nth-last-child(2) {
+      border-bottom: none;
+      @include respond(phone) {
+        border-bottom: 1px solid $light-color-2;
+      }
+    }
   }
   &__img-box {
     grid-column: 1 / span 2;
     grid-row: 1 / -1;
-    & {
-      @include respond(tab) {
-        display: none;
-      }
+
+    @include respond(lap) {
+      grid-column: 1 / span 1;
+    }
+    @include respond(tab) {
+      display: none;
     }
   }
   &__img {
     max-width: 100%;
-    & {
-      @include respond(tab) {
-        display: none;
-      }
-    }
   }
 }
