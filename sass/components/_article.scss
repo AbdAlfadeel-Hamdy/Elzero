@@ -1,5 +1,5 @@
 .article {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
+  box-shadow: $main-shadow;
   border-radius: 5px;
   overflow: hidden;
   transition: 0.3s;
@@ -30,9 +30,9 @@
   }
   &:hover {
     transform: translateY(-1rem);
-    box-shadow: 0 4.8rem 8rem rgba(0, 0, 0, 0.2);
+    box-shadow: $main-shadow-alt;
     svg {
-      animation: toRight 1s infinite ease-in-out;
+      animation: arrowRight 1s infinite ease-in-out;
     }
   }
 }
