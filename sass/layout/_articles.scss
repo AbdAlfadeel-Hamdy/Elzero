@@ -1,5 +1,8 @@
 .articles {
-  padding: 10rem 0 14rem;
+  padding: $section-padding;
+  @include respond(phone) {
+    padding: $section-padding-phone;
+  }
 
   &__content {
     display: grid;

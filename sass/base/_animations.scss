@@ -23,7 +23,7 @@
   }
 }
 
-@keyframes toRight {
+@keyframes arrowRight {
   0% {
     transform: translatex(0);
   }
@@ -46,3 +46,26 @@
 //     transform: scale(0);
 //   }
 // }
+
+@keyframes toRight {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes toLeft {
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}

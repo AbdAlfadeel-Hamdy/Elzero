@@ -19,30 +19,23 @@ body {
     text-transform: uppercase;
     border: 2px solid $black-color;
     padding: 1rem 2rem;
+    line-height: 1.1;
     position: relative;
-    transition: background-color 0.3s 0.2s ease-out, color 0.3s 0.4s ease-out,
-      border 0.3s 0.5s ease-out;
+    transition: 0.3s;
     &:hover {
-      background-color: $main-color;
       color: #fff;
       border: 2px solid #fff;
+      transition-delay: 0.5s;
     }
-    &:hover::before,
+    &:hover::before {
+      z-index: -1;
+      animation: toRight 0.5s linear forwards;
+    }
     &:hover::after {
-      transform: translate(0, -50%);
+      z-index: -1;
+      animation: toLeft 0.5s linear forwards;
     }
-    &::before {
-      content: "";
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 50%;
-      position: absolute;
-      background-color: $main-color;
-      top: 50%;
-      left: 0;
-      transform: translate(-3rem, -50%);
-      transition: 0.3s;
-    }
+    &::before,
     &::after {
       content: "";
       width: 1.2rem;
@@ -51,9 +44,14 @@ body {
       position: absolute;
       background-color: $main-color;
       top: 50%;
-      right: 0;
-      transform: translate(3rem, -50%);
-      transition: 0.3s;
+    }
+    &::before {
+      left: -3rem;
+      transform: translateY(-50%);
+    }
+    &::after {
+      right: -3rem;
+      transform: translateY(-50%);
     }
   }
   &__tertiary {

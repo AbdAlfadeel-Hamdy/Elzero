@@ -8,5 +8,8 @@
     @include respond(tab) {
       max-width: 75rem;
     }
+    @include respond(phone) {
+      padding: 0 3rem;
+    }
   }
 }
