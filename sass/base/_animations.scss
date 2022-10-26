@@ -29,18 +29,6 @@
   }
 }
 
-// @keyframes pump {
-//   0% {
-//     transform: scale(0);
-//   }
-//   50% {
-//     transform: scale(1);
-//   }
-//   100% {
-//     transform: scale(0);
-//   }
-// }
-
 @keyframes toRight {
   50% {
     left: 0;
@@ -61,5 +49,17 @@
     border-radius: 0;
     width: 50%;
     height: 100%;
+  }
+}
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
   }
 }
