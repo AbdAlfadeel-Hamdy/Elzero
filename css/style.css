@@ -451,18 +451,19 @@ body {
   .feature__heading {
     font-size: 4rem;
     font-weight: 700;
+    width: fit-content;
     position: relative;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
     line-height: 1.2; }
     .feature__heading::after {
       content: "";
       height: 5px;
-      width: 30%;
+      width: 100%;
       position: absolute;
       background-color: #f44036;
       left: 50%;
-      transform: translate(-50%, 1.5rem);
-      bottom: 0; }
+      bottom: -1.5rem;
+      transform: translateX(-50%); }
   .feature:nth-child(2) .feature__heading::after {
     background-color: #009688; }
   .feature:nth-child(3) .feature__heading::after {
