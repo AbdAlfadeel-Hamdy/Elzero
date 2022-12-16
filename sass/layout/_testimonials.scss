@@ -1,6 +1,6 @@
 .testimonials {
   padding: $section-padding;
-  background-color: $light-color-3;
+  background-color: $section-bg;
 }
 
 .persons {
@@ -12,11 +12,12 @@
     border-radius: 5px;
     position: relative;
     padding: 2rem;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.05);
+
+    box-shadow: $main-shadow;
     &__img-box {
       position: absolute;
       border-radius: 50%;
-      background-color: $light-color-3;
+      background-color: $section-bg;
       padding: 1rem;
       top: 0;
       right: 0;
